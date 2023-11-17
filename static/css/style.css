@@ -1,0 +1,30 @@
+body{
+    background-color:rgb(223, 229, 236);
+}
+
+.nav-container{
+    width: 100%;
+    height: 70px;
+    background-color: dimgray;
+    padding-top: 5px;
+    box-sizing: border-box;
+}
+  .nav-container ul {
+    justify-content: right;
+    display: flex;
+  }
+  .nav-container li {
+    list-style: none;
+  }
+  .nav-container a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    margin-right: 35px;
+  }
+
+.main-content{
+    width: 70vw;
+    height: 70vh;
+    background-color: rgb(220, 178, 178);
+} 
