@@ -4,10 +4,15 @@
 ChatApp -login-
 {% endblock %}
 
-{% block content%}
-<h3>ユーザー</h3>
-<input type="text" required minlength="5" maxlength="5" size="10" />
-<h3>PassWord</h3>
-<input type="text" required minlength="5" maxlength="5" size="10" />
-<button>ログイン</button>
-{% endblock%}
+{% block content %}
+<form method="post" action="{{ url_for('index') }}">
+    <h3>ユーザー</h3>
+    <input type="text" name="username" required minlength="4" maxlength="10" size="10" />
+    <h3>PassWord</h3>
+    <input type="password" name="password" required minlength="5" maxlength="10" size="10" />
+    <button type="submit">ログイン</button>
+</form>
+{% if error %}
+    <p style="color: red;">{{ error }}</p>
+{% endif %}
+{% endblock %}
